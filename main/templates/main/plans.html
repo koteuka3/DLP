@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lidojumu plāns</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container fade-in">
+       <a href="#" class="navbar-brand d-flex align-items-left">
+        <strong>Lidojumu plans</strong>
+       </a>
+    </div>
+  </div>
+
+<body>
+
+ <section class="section">
+     <div class="container">
+         <div class="justify-content-center">
+             <div class="col-md-14">
+
+      {% for msg in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Sveiki!</strong> {{ msg }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+      {% endfor %}
+</div>
+</div>
+</div>
+</section>
+
+          <main class="mt-5">
+    <div class="container">
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img src="https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>Informācija</strong></h4>
+            <p class="text-muted">
+              Dronu lidojumu grafiks nodrošina koordināciju starp dažādiem droniem, lai novērstu sadursmes gaisa telpā. Tas ietver arī informāciju par dronu uzņēmumu nosaukumiem, atbildīgajiem pilotiem un to sertifikāciju.
+            </p>
+            <p><strong>Vai grafiks tiek atjaunināts?</strong></p>
+            <p class="text-muted">
+              Lidojumu grafiks tiek regulāri atjaunināts, lai atspoguļotu aktuālo informāciju par pieejamajiem lidojumu laikiem un ierobežojumiem. Tas palīdz optimizēt dronu darbību, vienlaikus nodrošinot drošību un atbilstību attiecīgajiem regulējumiem un noteikumiem.
+                Lidojumu grafika izstrāde un uzturēšana ir būtiska daļa no dronu operatoru darbības, lai nodrošinātu vienmērīgu un efektīvu dronu darbību gan komerciālā, gan privātā jomā.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <hr class="my-5" />
+
+
+<br>
+<!-- Pogas trigger modal -->
+<section class="bg-white">
+    <div class="container">
+        <div class="text-start">
+            <h3>Darba pievienošana</h3>
+        </div>
+        <div class="text-start">
+            <div class="text-start">
+                <button  type="button" class="btn btn-outline-dark"  data-mdb-ripple-color="dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fas fa-plus"></i> Izveidot
+                 </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modal-title"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post">
+                 <div class="modal-header">
+                <h4 class="modal-title" id="modal-title">Darba pievienošana</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                {% csrf_token %}
+                {{ form.as_p }}
+                 </div>
+                <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Aizvērt</button>
+                <button type="submit" class="btn btn-primary">Saglabāt</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>
+
+ <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet' />
+ <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/lv.js"></script>
+
+ <div class="container">
+     <div class="row">
+         <div class="col-md-12">
+             <div id="calendar"></div>
+         </div>
+     </div>
+ </div>
+
+<script>
+  $(document).ready(function() {
+  $('#calendar').fullCalendar({
+    buttonText: {
+    today: 'sodien',
+    },
+    theme: false,
+    monthNames: ['Janvaris','Februaris','Marts','Aprilis','Maijs','Junijs','Julijs','Augusts','Septembris','Oktobris','Novembris','Decembris'],
+    dayNamesShort: ['Sv','Pr','Ot','Tr','Ce','Pk','Se'],
+    locale: 'lv',
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: ''
+    },
+    defaultView: 'agendaWeek',
+    aspectRatio: 1,
+    fixedWeekCount: false,
+    navLinks: true,
+    selectable: false,
+    editable: false,
+    slotLabelFormat: 'H:mm',
+    allDayText: 'Visa diena',
+     events: [
+            {% for mission in missions %}
+            {
+                title: '{{ mission.title }}',
+                start: '{{ mission.start }}',
+                end: '{{ mission.end }}'
+            },
+            {% endfor %}
+        ]
+    });
+    calendar.render();
+});
+  </script>
+
+   <style>
+    #calendar {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+
+<br>
+
+ <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+
+<footer class=" text-center ">
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Dronu Lidojumu Grafiks</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://images.pexels.com/photos/997130/pexels-photo-997130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dronu īpašības un tehnoloģijas</h5>
+                <p class="card-text">
+                  Droni ir autonomi gaisa kuģi, kas tiek kontrolēti ar attālinātu vadību. Viņi ir aprīkoti ar dažādām tehnoloģijām un sensoriem, kas ļauj veikt dažādas misijas un uzdevumus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://images.pexels.com/photos/442589/pexels-photo-442589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dronu pielietojums</h5>
+                <p class="card-text">
+                  Droni tiek izmantoti dažādās nozarēs, piemēram, fotogrāfijā un videogrāfijā, zemes pārraudzībā, meklēšanā un glābšanā, piegādes pakalpojumos un pat izklaides mērķiem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://images.pexels.com/photos/1852984/pexels-photo-1852984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dronu drošība</h5>
+                <p class="card-text">
+                  Dronu drošība ir ļoti svarīga, lai novērstu negadījumus un sadursmes gaisa telpā. Drošības pasākumi ietver drošības protokolu ievērošanu, navigācijas sistēmu izmantošanu un atbildīgu lidojumu plānošanu.
+                </p>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <strong> © 2023 Kalendārā ir redzams dronu lidojumu grafiks </strong>
+    <a class="text-dark" href=""></a>
+  </div>
+</footer>
+
+</body>
+</html>
