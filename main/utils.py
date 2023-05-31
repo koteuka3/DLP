@@ -4,7 +4,6 @@ from .weather import check_weather_conditions
 from .models import Work
 
 def generate_event_list():
-    openai.api_key = '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'
     prompt = """
      Izveidojiet misiju sarakstu, kas ietver šādu informāciju:
      1. Drone Fly
@@ -22,10 +21,11 @@ def generate_event_list():
         engine="text-davinci-003",
         prompt=prompt,
         max_tokens=200,
-        n=14,
+        n=7,
         stop=None,
         temperature=0.7,
         timeout=15,
+        api_key='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'
     )
 
     event_list = []
